@@ -27,11 +27,11 @@ To run this project clone this repository in a folder and open the html file, th
 
 This activity consisted in implemenenting window alerts, prompts and confirms that allowed the code to get some data from the user and then return a password with said requirements.
 
-The code was segmented into three pieces. The first one kept track of where the password was going to be displayed and was once the password was built, it was also in charge of displaying the password.
+The code was segmented into three pieces. The first one kept track of where the password was going to be displayed and was once the password was built, it was also in charge of displaying the password, this function can be seen in the code sample image #1.
 
-The second one was in charge of asking the user for their requirements, making sure that the requirements met the minimum criteria to be able to create a password and storing the characters that were randomly generated
+The second one was in charge of asking the user for their requirements, making sure that the requirements met the minimum criteria to be able to create a password and storing the characters that were randomly generated. This was achieved by creating an array that was able to tell when the password already had at least 1 character of each tipe. This data was compared with an array that had the requirements given by the user and if these matched, then the password fulfilled the user requirements, if it did not, then the password is erased and a new one is generated. The code that was in charge of asking the user for the requirements is shown in the code sample #2 image and the code that managed the logic regarding wheter the code fulfilled all the requirements or not can be seen in the code sample #3 image.
 
-The last one was in charge of creating a single random character that was going to be added to the password.
+The last one was in charge of creating a single random character that was going to be added to the password, this section can be appreciated in the code sample image #4.
 
 |![Sample #1 code - Keeping track of password display area](assets/images/sample-code-1.JPG)   |
 | ------------- |
@@ -58,6 +58,8 @@ The last one was in charge of creating a single random character that was going 
 | Sample #4 code - Character randomizer logic |
 
 &nbsp;
+
+
 
 ## Deployed webpage:
 * https://erickcc.github.io/HW3-PasswordGenerator/

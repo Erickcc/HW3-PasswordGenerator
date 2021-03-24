@@ -8,6 +8,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
+
 //Returns a random alphabetic character
 function randomizeAlphabet() {
   var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -26,6 +27,8 @@ function randomizeSpecialCharacter() {
   var random = specialCharacters[Math.floor((Math.random() * specialCharacters.length))];
   return random;
 }
+
+
 //Generates a password
 function generatePassword() {
   //Value that will be returned
@@ -73,7 +76,7 @@ function generatePassword() {
     //the password again
     do {
       characterIsPresent.fill(false);
-      password="";
+      password = "";
       //Create a password of "passwordInput[0]" size, this size was taken from the prompt that the user filled
       for (var i = 0; i < passwordInput[0]; i++) {
         //Create a random number from 0 to 3, where 0 is a lowercase, 1 is an uppercase, 2 is a number and 
@@ -97,14 +100,15 @@ function generatePassword() {
           characterIsPresent[3] = true;
         }
       }
-    //If the password we generated doesnt have at least 1 character of each character type the user requested
-    //Then generate the password again
+      //If the password we generated doesnt have at least 1 character of each character type the user requested
+      //Then generate the password again
     } while (passwordInput[1] != characterIsPresent[0] || (passwordInput[2] != characterIsPresent[1])
     || passwordInput[3] != characterIsPresent[2] || passwordInput[4] != characterIsPresent[3])
   }
   //Returns the password
   return password;
 }
+
 
 // Add event listener to generate password button
 generateBtn.addEventListener("click", writePassword);
